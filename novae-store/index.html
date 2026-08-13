@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVAÉ | Clean care. Real glow.</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- 1. Announcement bar -->
+    <aside class="announcement-bar" role="note">
+        <p>Free shipping on orders above ₹999</p>
+    </aside>
+
+    <!-- 2. Navbar -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <button type="button" class="mobile-menu-btn"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-nav">
+                <i class="ph ph-list" aria-hidden="true"></i>
+            </button>
+            <nav class="nav-left" id="primary-nav" aria-label="Primary navigation">
+                <ul class="nav-links" role="list">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="index.html#bestsellers">Best Sellers</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="logo" aria-label="NOVAÉ — Home">NOVAÉ</a>
+            <div class="nav-right">
+                <button type="button" aria-label="Search" onclick="window.location.href='shop.html'">
+                    <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+                </button>
+                <button type="button" aria-label="View wishlist">
+                    <i class="ph ph-heart" aria-hidden="true"></i>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="View cart">
+                    <i class="ph ph-shopping-bag" aria-hidden="true"></i>
+                    <span class="cart-count" aria-live="polite" aria-label="Cart items">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- 3. Hero section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2000&auto=format&fit=crop" alt="Woman applying premium skincare serum">
+            </div>
+            <div class="hero-content">
+                <h1 id="hero-heading">Skin, simplified.</h1>
+                <p>Thoughtfully formulated essentials for healthy, naturally radiant skin.</p>
+                <div class="hero-actions">
+                    <a href="shop.html" class="btn btn-primary">Shop Best Sellers</a>
+                    <a href="shop.html" class="btn btn-outline">Explore the Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Featured products -->
+        <section id="bestsellers" class="featured-products container section" aria-labelledby="featured-heading">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow" aria-hidden="true">New &amp; Curated</p>
+                    <h2 id="featured-heading">Essentials for Every Skin</h2>
+                </div>
+                <a href="shop.html" class="link-view-all">View All</a>
+            </div>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <button type="button" class="wishlist-btn" aria-label="Add Radiance Serum to wishlist" data-product-id="1" onclick="toggleWishlist('1', this)">
+                            <i class="ph ph-heart" aria-hidden="true"></i>
+                        </button>
+                        <a href="product.html?id=1" aria-label="View Radiance Serum"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=600&auto=format&fit=crop" alt="Bottle of Radiance Serum"></a>
+                        <button type="button" class="quick-add" aria-label="Add Radiance Serum to cart" onclick="CartService.addToCart('1', 1); showGlobalToast('Added to cart!');">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html?id=1"><h3 class="product-title">Radiance Serum</h3></a>
+                        <p class="product-price">₹1,499</p>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <button type="button" class="wishlist-btn" aria-label="Add Cloud Milk Cleanser to wishlist" data-product-id="2" onclick="toggleWishlist('2', this)">
+                            <i class="ph ph-heart" aria-hidden="true"></i>
+                        </button>
+                        <a href="product.html?id=2" aria-label="View Cloud Milk Cleanser"><img src="images/cloud_milk_cleanser.jpg" alt="Bottle of Cloud Milk Cleanser"></a>
+                        <button type="button" class="quick-add" aria-label="Add Cloud Milk Cleanser to cart" onclick="CartService.addToCart('2', 1); showGlobalToast('Added to cart!');">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html?id=2"><h3 class="product-title">Cloud Milk Cleanser</h3></a>
+                        <p class="product-price">₹899</p>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <button type="button" class="wishlist-btn" aria-label="Add Barrier Cream to wishlist" data-product-id="8" onclick="toggleWishlist('8', this)">
+                            <i class="ph ph-heart" aria-hidden="true"></i>
+                        </button>
+                        <a href="product.html?id=8" aria-label="View Barrier Cream"><img src="images/barrier_cream.jpeg" alt="Jar of Barrier Cream"></a>
+                        <button type="button" class="quick-add" aria-label="Add Barrier Cream to cart" onclick="CartService.addToCart('8', 1); showGlobalToast('Added to cart!');">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html?id=8"><h3 class="product-title">Barrier Cream</h3></a>
+                        <p class="product-price">₹1,599</p>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <button type="button" class="wishlist-btn" aria-label="Add Sun Veil SPF 50 to wishlist" data-product-id="4" onclick="toggleWishlist('4', this)">
+                            <i class="ph ph-heart" aria-hidden="true"></i>
+                        </button>
+                        <a href="product.html?id=4" aria-label="View Sun Veil SPF 50"><img src="images/SunveilSunscreenCream.jpeg" alt="Tube of Sun Veil SPF 50"></a>
+                        <button type="button" class="quick-add" aria-label="Add Sun Veil SPF 50 to cart" onclick="CartService.addToCart('4', 1); showGlobalToast('Added to cart!');">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html?id=4"><h3 class="product-title">Sun Veil SPF 50</h3></a>
+                        <p class="product-price">₹999</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Shop by concern -->
+        <section class="shop-by-concern section bg-beige" aria-labelledby="concern-heading">
+            <div class="container">
+                <p class="eyebrow text-center" aria-hidden="true">Find your match</p>
+                <h2 id="concern-heading" class="text-center">Shop by Concern</h2>
+                <div class="concern-grid">
+                    <a href="#" class="concern-card">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=500&auto=format&fit=crop" alt="Hydration">
+                        <h3>Hydration</h3>
+                    </a>
+                    <a href="#" class="concern-card">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=500&auto=format&fit=crop" alt="Brightening">
+                        <h3>Brightening</h3>
+                    </a>
+                    <a href="#" class="concern-card">
+                        <img src="images/sensitive_skin.jpeg" alt="Sensitive Skin">
+                        <h3>Sensitive Skin</h3>
+                    </a>
+                    <a href="#" class="concern-card">
+                        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=500&auto=format&fit=crop" alt="Sun Protection">
+                        <h3>Sun Protection</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Brand story -->
+        <section id="about" class="brand-story container section" aria-labelledby="story-heading">
+            <div class="story-grid">
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1552046122-03184de85e08?q=80&w=800&auto=format&fit=crop" alt="Natural Skincare Textures">
+                </div>
+                <div class="story-content">
+                    <h2 id="story-heading">Clean care.<br>Real glow.</h2>
+                    <p>At NOVAÉ, we believe that your skin deserves the purest ingredients. Our formulas are meticulously crafted without harsh chemicals, blending the best of nature and science to restore your skin's natural vitality.</p>
+                    <p>Everything your skin needs. Nothing it doesn't.</p>
+                    <a href="#" class="btn btn-outline">Our Philosophy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Ingredient section -->
+        <section class="ingredients section bg-sage" aria-labelledby="ingredients-heading">
+            <div class="container text-center">
+                <h2 id="ingredients-heading">Nature Meets Science</h2>
+                <p class="subtitle">Potent actives that deliver real results.</p>
+                <div class="ingredient-grid">
+                    <div class="ingredient-item">
+                        <div class="icon-wrap"><i class="ph ph-drop" aria-hidden="true"></i></div>
+                        <h4>Hyaluronic Acid</h4>
+                        <p>Plumps and deeply hydrates</p>
+                    </div>
+                    <div class="ingredient-item">
+                        <div class="icon-wrap"><i class="ph ph-sparkle" aria-hidden="true"></i></div>
+                        <h4>Niacinamide</h4>
+                        <p>Evens tone and minimizes pores</p>
+                    </div>
+                    <div class="ingredient-item">
+                        <div class="icon-wrap"><i class="ph ph-plant" aria-hidden="true"></i></div>
+                        <h4>Centella</h4>
+                        <p>Soothes and repairs the barrier</p>
+                    </div>
+                    <div class="ingredient-item">
+                        <div class="icon-wrap"><i class="ph ph-sun" aria-hidden="true"></i></div>
+                        <h4>Vitamin C</h4>
+                        <p>Brightens and protects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Best seller banner -->
+        <section class="banner section" aria-labelledby="banner-heading">
+            <div class="banner-bg">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2000&auto=format&fit=crop" alt="Close up of clear serum with bubbles">
+            </div>
+            <div class="banner-content">
+                <h2 id="banner-heading">The Cult Favorite</h2>
+                <p>Experience our award-winning Radiance Serum. One bottle sold every 3 minutes.</p>
+                <a href="product.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- 9. Customer testimonials -->
+        <section class="testimonials container section" aria-labelledby="testimonials-heading">
+            <div class="testimonials-header text-center">
+                <p class="eyebrow" aria-hidden="true">What they're saying</p>
+                <h2 id="testimonials-heading">Real Results, Real People</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote">This completely transformed my skin texture. It feels so light yet hydrating. I can't live without the cleanser now.</p>
+                    <p class="author">Anjali M. &mdash; Mumbai</p>
+                </div>
+                <div class="testimonial-card">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote">Finally, a brand that doesn't irritate my sensitive skin! The barrier cream is an absolute holy grail product for me.</p>
+                    <p class="author">Sarah K. &mdash; Bangalore</p>
+                </div>
+                <div class="testimonial-card">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote">The natural glow is real. My complexion looks so bright and healthy even without makeup. Highly recommended!</p>
+                    <p class="author">Priya R. &mdash; Delhi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Newsletter section -->
+        <section class="newsletter section bg-beige" aria-labelledby="newsletter-heading">
+            <div class="container newsletter-container">
+                <p class="eyebrow">Stay in the loop</p>
+                <h2 id="newsletter-heading">The NOVAÉ Edit</h2>
+                <p>Exclusive skincare guidance, new arrivals, and 10% off your first order.</p>
+                <form class="newsletter-form" onsubmit="return false;" novalidate>
+                    <div class="form-group">
+                        <label for="newsletter-email" class="visually-hidden">Email address</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. Footer -->
+    <footer class="site-footer bg-charcoal" aria-label="Site footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo" aria-label="NOVAÉ — Home">NOVAÉ</a>
+                <p>Clean care. Real glow.</p>
+            </div>
+            <nav class="footer-links" aria-label="Shop links">
+                <h4 id="footer-shop">Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="index.html#bestsellers">Best Sellers</a></li>
+                    <li><a href="shop.html">Skincare Sets</a></li>
+                    <li><a href="shop.html">Gift Cards</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-links" aria-label="About links">
+                <h4 id="footer-about">About</h4>
+                <ul>
+                    <li><a href="index.html#about">Our Story</a></li>
+                    <li><a href="index.html#ingredients-heading">Ingredients</a></li>
+                    <li><a href="index.html#about">Sustainability</a></li>
+                    <li><a href="#">Journal</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-links" aria-label="Help links">
+                <h4 id="footer-help">Help</h4>
+                <ul aria-labelledby="footer-help">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NOVAÉ. All rights reserved.</p>
+            <ul class="social-links" role="list">
+                <li><a href="#" aria-label="Follow us on Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Follow us on Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Follow us on Twitter"><i class="ph ph-twitter-logo" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="toast-container" class="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
